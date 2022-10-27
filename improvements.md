@@ -1,1 +1,1 @@
-- update react router version
+- pass routes as constants
