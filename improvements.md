@@ -1,1 +1,3 @@
-- pass routes as constants
+- pass routes as constants;
+
+- mobile first;
