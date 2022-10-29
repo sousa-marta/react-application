@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-import classes from "./MainNavigation.module.css";
+import classes from "./Navbar.module.css";
 
-const MainNavigation = (params) => {
+const Navbar = (params) => {
   return (
     <header className={classes.header}>
       <div className={classes.logo}>React Meetups</div>
@@ -23,4 +23,4 @@ const MainNavigation = (params) => {
   );
 }
 
-export default MainNavigation;
+export default Navbar;
