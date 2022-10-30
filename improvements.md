@@ -7,3 +7,5 @@
 - axios
 
 - feedback from post
+
+- store if is favorite with a flag in db

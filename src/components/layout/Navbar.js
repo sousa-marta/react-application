@@ -1,8 +1,12 @@
-import { Link } from "react-router-dom";
+import { useContext } from 'react';
+import { Link } from 'react-router-dom';
+import FavoritesContext from '../../store/favorites-context';
 
-import classes from "./Navbar.module.css";
+import classes from './Navbar.module.css';
 
 const Navbar = (params) => {
+  const favoritesContext = useContext(FavoritesContext);
+
   return (
     <header className={classes.header}>
       <div className={classes.logo}>React Meetups</div>
@@ -15,12 +19,15 @@ const Navbar = (params) => {
             <Link to="/new-meetup">Add New Meetups</Link>
           </li>
           <li>
-            <Link to="/favorites">My Favorites</Link>
+            <Link to="/favorites">
+              My Favorites
+              <span className={classes.badge}>{favoritesContext.totalFavorites}</span>
+            </Link>
           </li>
         </ul>
       </nav>
     </header>
   );
-}
+};
 
 export default Navbar;
