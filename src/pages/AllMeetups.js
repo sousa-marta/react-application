@@ -1,15 +1,14 @@
 import { useState, useEffect } from 'react';
 
 import MeetupsList from '../components/meetups/MeetupsList';
+import { config } from '../utils/config';
 
 const AllMeetupsPage = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedMeetups, setLoadedMeetups] = useState([]);
 
   useEffect(() => {
-    fetch(
-      'https://react-application-48e28-default-rtdb.firebaseio.com/meetups.json'
-    )
+    fetch(`${config.databaseUrl}/meetups.json`)
       .then((response) => {
         return response.json(); //it's also a promise
       })

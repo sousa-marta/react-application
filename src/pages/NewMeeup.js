@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { config } from '../utils/config';
 
 import NewMeetupForm from '../components/meetups/NewMeetupForm';
 
@@ -6,8 +7,7 @@ const NewMeetupPage = () => {
   const navigate = useNavigate();
 
   const saveMeetup = (data) => {
-    fetch(
-      'https://react-application-48e28-default-rtdb.firebaseio.com/meetups.json',
+    fetch(`${config.databaseUrl}/meetups.json`,
       {
         method: 'POST',
         body: JSON.stringify(data),
