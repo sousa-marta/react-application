@@ -7,6 +7,8 @@ import NewMeetupPage from './pages/NewMeeup';
 
 import Layout from './components/layout/Layout';
 
+import 'bootstrap/dist/css/bootstrap.css';
+
 function App() {
   return (
     <Layout>
